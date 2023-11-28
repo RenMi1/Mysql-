@@ -29,14 +29,13 @@ namespace WindowsFormsApp1
             try
             {
                 con.connectdb.Open();
-                label1.Text = "";
-                
+                label1.Text = "You are Connected to the MySql Database!";
+                label1.ForeColor = System.Drawing.Color.Green;
                 con.connectdb.Close();
             }
             catch (Exception)
             {
-                label1.Text = "You are Connected to the MySql Database!";
-                label1.ForeColor = System.Drawing.Color.Green;
+                label1.Text = "Failed to Connect to Mysql Database!";
             }
         }
 
